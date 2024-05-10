@@ -3,17 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Simple</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>develop page practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts Roboto -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #23D96E; /* verde similar al de Feid */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #28A745; /* verde más oscuro */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background-color: #E6FFEC; /* verde claro */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3 {
+            color: #333;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .card a {
+            color: #23D96E;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .card a:hover {
+            color: #28A745;
+        }
+        footer {
+            background-color: #23D96E; /* verde similar al de Feid */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>develop page</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
     <div class="container">
-        <h1>Bienvenido a mi Página Simple</h1>
-        <p>Este es un ejemplo simple de HTML, CSS y JavaScript.</p>
-        <button id="myButton">Haz Clic Aquí</button>
-        <p id="message" style="display:none;">¡Has hecho clic en el botón!!!! 😄</p>
+        <div class="card">
+            <h3>Servicio 1</h3>
+            <p>Descripción del servicio 1.</p>
+            <a href="#" onclick="mostrarAlerta()"><i class="fas fa-chevron-right"></i> Leer más</a>
+        </div>
+        <div class="card">
+            <h3>Servicio 2</h3>
+            <p>Descripción del servicio 2.</p>
+            <a href="#" onclick="mostrarAlerta()"><i class="fas fa-chevron-right"></i> Leer más</a>
+        </div>
+        <div class="card">
+            <h3>Servicio 3</h3>
+            <p>Descripción del servicio 3.</p>
+            <a href="#" onclick="mostrarAlerta()"><i class="fas fa-chevron-right"></i> Leer más</a>
+        </div>
     </div>
-
+    <footer>
+        <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
+
